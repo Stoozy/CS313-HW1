@@ -242,6 +242,7 @@ void sumrand<T>::find_subsets(T * arr, T * subset, int n, T sum){
     }
     // empty set
     if (sum != 0 && n == 0) return;
+    if ( sum < 0) return;
 
     // copy array into subset 
     for(unsigned i=0; i<n; ++i){

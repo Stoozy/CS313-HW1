@@ -6,11 +6,11 @@ Create a class that effectively finds all possibilities of a list of random numb
 
 ## Solution
 
-For every number build a sequence including that number and not including that number. When including the number we can subtract from the total sum wanted ( because it is added), and sum stays the same when if it's not added. When leftover sum is 0 then we have found a solution.
+For every number build a sequence including that number and not including that number. When including the number we can subtract from the total sum wanted (because it is added), and sum stays the same when if it's not added. When leftover sum is 0 then we have found a solution.
 
 
 Let's test this algorithm out on this list {1, 2, 4, 6} with wanted sum 6:
-(1 means include and 0 means include) every node is a leftover sum
+(1 means include and 0 means exclude) every node is a leftover sum
 
                              6
                       1(6) /   \ 0(6)

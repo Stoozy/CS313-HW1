@@ -6,5 +6,7 @@ OBJS= main
 all:
 	$(CC) $(SRCS) -o -I$(INCLUDE) -o $(OBJS)
 
+run: 
+	./$(OBJS)
 clean:
 	rm -rf $(OBJS)

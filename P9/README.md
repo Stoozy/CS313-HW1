@@ -27,7 +27,7 @@ Array version:
 
     Let's see an example with a subsequence length of 3, meaning the sequence size is 8 (2^n). Imagine the random sequence is the following
     
-    ```
+
         11010100
     
         we can check if bit 3 is set by bitwise anding it with this
@@ -46,7 +46,7 @@ Array version:
           01000000 -> true
 
        
-    ```
+
 
     With this I can get the subsequences and store them in the subsequences list. Now I can just check if it's a debruijn sequence or not.
 

@@ -1,8 +1,9 @@
+#pragma once
+
 #include <iostream>
 #include <vector>
 #include <random>
 #include <math.h>
-
 
 typedef unsigned char u8;
 

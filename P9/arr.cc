@@ -56,7 +56,8 @@ namespace arr{
     
     void print_seq(u8 * arr,  int size){
         for(unsigned i=0; i<size; ++i) 
-            arr[i] ? std::cout << "1" : std::cout << "0";
+            check_bit(arr, i) ? std::cout << "1" : std::cout << "0";
+            //arr[i] ? std::cout << "1" : std::cout << "0";
         std::cout << std::endl;
     }
     
@@ -84,9 +85,9 @@ namespace arr{
     
         //bool * seq = new bool[size];
         
-        // fill array with random bool values 
+        // fill sequence with random boolean values 
         for(unsigned i=0; i<size; ++i){
-            seq[i] = rand()%2;
+            rand()%2 ? set_bit(seq, i) : clear_bit(seq, i);
         }
     
         std::cout << "Initial sequence: ";

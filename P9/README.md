@@ -25,6 +25,18 @@ For example, if length n was 3 it might look something like this:
 
 I use this list to make sure no subsequence shows up more than once, if it does, then the entire sequence is not a debruijn sequence. In this array implementation I've kept the sequence as an actual sequence of bits. 
 
+So instead of using entire 8 bits to store one boolean value, I am  using each bit to store a boolean. This uses 1/8th of the space.
+
+Let's see an example,
+
+    (Boolean sequence)
+    true        false       true        true
+    00000001    00000001    00000001    00000001 ...
+
+    (Bit sequence)
+    1011 ...
+
+
 I can use simple bitwise operations to check if a bit is set, toggle a bit, set a bit, clear a bit, etc;
 
 Let's see an example with a subsequence length of 3, meaning the sequence size is 8 (2^n). Imagine the random sequence is the following

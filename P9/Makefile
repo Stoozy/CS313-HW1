@@ -1,5 +1,5 @@
 CC=g++
-SRCS=main.cc
+SRCS=main.cc arr.cc
 OBJS=main
 
 

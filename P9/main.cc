@@ -1,12 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <random>
+#include <math.h>
 
-// TODO:  linked list version (and try using bitsets)
+// TODO:  linked list version (and use bitset for array version)
 static std::vector<std::string> subsequences;
 
 bool is_duplicate(std::string s){
-    int counter =0;
+    int counter = 0;
     for(unsigned i=0; i<subsequences.size(); ++i){
         if (subsequences[i] == s)
             ++counter;
@@ -15,11 +16,10 @@ bool is_duplicate(std::string s){
     return counter >= 2;
 }
 
-
 void update_subseq(bool * arr, int k, int size){
     subsequences.clear();
     std::cout << "Subsequences: { " ;
-    for(unsigned i=0; i<size-k; ++i){
+    for(unsigned i=0; i<size-(k-1); ++i){
         std::string bitstring = "";
         for(unsigned j=i; j<i+k; ++j){
             arr[j] ? bitstring.append("1") : bitstring.append("0");
@@ -49,12 +49,11 @@ bool is_db_seq(bool * arr, int k, int size){
 int main(){
     srand(time(0));
     int size, sublength;
-
-    std::cout << "Enter size k: " << std::endl;
-    std::cin >> size;
-
+    
     std::cout << "Enter order n: " << std::endl;
     std::cin >> sublength;
+
+    size = pow(2, sublength);
 
     bool * seq = new bool[size];
     
@@ -82,6 +81,7 @@ int main(){
 
     std::cout << "Found solution: ";
     print_seq(seq, size);
+
     std::cout << "Subsequences: { ";
     for(unsigned i=0; i<subsequences.size(); ++i){
         std::cout << subsequences[i] << " " ;

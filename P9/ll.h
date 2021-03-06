@@ -11,15 +11,24 @@ struct node {
 	node * next;
 };
 
-class ll_iterator {
+class ll {
 	private:
 		node * first;
-		node * current;
+        int length;
 	public:
-		ll_iterator();
-		node * operator++();		
+		ll();
 		void insert(node * n);
 		void print();
-
+        int size();
 		
 };
+
+namespace list{
+    bool is_duplicate();
+
+    bool is_db_seq(node * list);
+
+    void is_db_seq(node * list, int sublength);
+
+    void solve();
+}

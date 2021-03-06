@@ -4,9 +4,6 @@
 #include <math.h>
 #include "arr.h"
 
-
-
-
 namespace arr{
     // helper functions for dealing with bitsets
     void clear_bit(u8 * arr, unsigned index){
@@ -70,7 +67,7 @@ namespace arr{
         return true; 
     }
     
-    void solve_arr(){
+    void solve(){
         int sublength = rand() % 5+1;
         int size = pow(2, sublength);
     

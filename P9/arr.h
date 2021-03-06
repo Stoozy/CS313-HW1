@@ -28,6 +28,6 @@ namespace arr{
     
     bool is_db_seq(u8 * arr, int k, int size);
     
-    void solve_arr();
+    void solve();
     
 }

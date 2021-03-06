@@ -1,10 +1,10 @@
 CC=g++
-SRCS=main.cc arr.cc
+SRCS=main.cc arr.cc ll.cc
 OBJS=main
 
 
 all:
-	$(CC) $(SRCS) -o $(OBJS)
+	$(CC) -g $(SRCS) -o $(OBJS)
 
 run:
 	./main

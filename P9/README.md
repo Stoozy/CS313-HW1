@@ -141,5 +141,15 @@ Let's see an example
 
 
 
+### Results 
 
+An average result looks like this.
+
+        --------------------------------
+        Results:
+           Average array time: 102ms
+           Average list time: 947049642826ms
+        --------------------------------
+
+The justification I have for the difference in the two methods is access times. In arrays the access time is constant which is O(1). Where as in linked lists, I have to iterate over every item before reaching the index n: this results in O(n) access times (very slow).
 

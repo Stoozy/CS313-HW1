@@ -71,10 +71,8 @@ namespace arr{
         return true; 
     }
     
-    void solve(){
-        int sublength = rand() % 5+1;
-        int size = pow(2, sublength);
-    
+    void solve(int size, int sublength){
+            
     
         std::cout << "----------------------------" << std::endl;
         std:: cout << "Random subquence length n: " << sublength << std::endl;

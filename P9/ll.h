@@ -36,5 +36,5 @@ namespace list{
 
     void update_subseq(ll seq, int size, int sublength);
 
-    void solve();
+    void solve(int size, int sublength);
 }

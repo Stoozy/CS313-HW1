@@ -122,9 +122,7 @@ namespace list{
         cout << " }" << endl << endl;
     }
 
-    void solve(){
-        int sublength = rand() % 5 +1;
-        int size = pow(2, sublength);
+    void solve(int size, int sublength){
         
         cout << "--------------------------------" << endl;
         cout << "Random sequence length n:       " << sublength << endl;

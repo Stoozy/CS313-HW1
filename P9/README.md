@@ -106,9 +106,25 @@ This is the structure of the linked list
     
         0 : 1 -> 1 : 0 -> 2 : 1 -> 3 : 0 -> nullptr
 
-The algorithm I am using requires that I know the value at position x of the list, therefore I made a simple at function that returns the value of the node at index x.
+The algorithm I am using requires that I know the value at position i of the list, therefore I made a simple `at` function that returns the value of the node at index i.
+The pseudocode for this looks something like this: 
+    ```cpp
+        T at(int pos){
+            int counter = 0;
+            Node * current = this->first;
+            while current == nullptr {
+                if counter == pos {
+                    return current->value;
+                }
+                current = current->next;
+                counter++;
+            }
+            
+        }
+    ```
 
 It simply iterates over the list until a counter has reached the index ( the counter increments every iteration of course).
+
 The rest is basically the same as the array implementation: store all contiguous subsequences, check for repetition.
 
 Let's see an example

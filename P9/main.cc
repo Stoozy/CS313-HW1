@@ -10,10 +10,10 @@ int main(){
     srand(time(0));
 
 	
-    for(unsigned i=0; i<100; ++i){
-        //arr::solve_arr();
+    //for(unsigned i=0; i<100; ++i){
+        //arr::solve();
         list::solve();
-    }
+    //}
 
     return 0;
 }

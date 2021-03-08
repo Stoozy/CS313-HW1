@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <vector>
 
 using std::cout;
 using std::endl;
@@ -20,15 +21,20 @@ class ll {
 		void insert(node * n);
 		void print();
         int size();
+        int at(int i);
+        bool is_empty();
+        node * head();
 		
 };
 
 namespace list{
+    static std::vector<std::string> subsequences;
+
     bool is_duplicate();
+    
+    bool is_db_seq();
 
-    bool is_db_seq(node * list);
-
-    void is_db_seq(node * list, int sublength);
+    void update_subseq(ll seq, int size, int sublength);
 
     void solve();
 }

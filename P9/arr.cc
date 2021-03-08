@@ -39,12 +39,13 @@ namespace arr{
     
     void update_subseq(u8 * arr, int k, int size){
         subsequences.clear();
+
         std::cout << "Subsequences: { " ;
         for(unsigned i=0; i<size-(k-1); ++i){
             std::string bitstring = "";
-            for(unsigned j=i; j<i+k; ++j){
+            for(unsigned j=i; j<i+k; ++j)
                 check_bit(arr, j) ? bitstring.append("1") : bitstring.append("0");
-            }
+
             std::cout << bitstring << " ";
             subsequences.push_back(bitstring);
         }
@@ -58,7 +59,10 @@ namespace arr{
         std::cout << std::endl;
     }
     
-    bool is_db_seq(u8 * arr, int k, int size){
+    bool is_db_seq(){
+        // if there is a repeating subsequence
+        // it's not a debruijn sequence
+        // otherwise, it is a debruijn sequence
         for(unsigned i=0; i<subsequences.size(); ++i){
             if(is_duplicate(subsequences[i])){
                 return false;
@@ -91,7 +95,7 @@ namespace arr{
         print_seq(seq, size);
         update_subseq(seq, sublength, size);
     
-        while(!is_db_seq(seq, sublength, size)) {
+        while(!is_db_seq()) {
             // randomly mutate entire sequence here
             for(unsigned i=0; i<size; ++i){
                 // 5% probability to toggle current val

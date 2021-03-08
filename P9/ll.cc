@@ -71,8 +71,8 @@ void ll::print(){
 
 	node * current = first;
 	while(current != nullptr){
-	    if(current->next == nullptr) cout << current->data;
-	    else cout << current->data;
+	    if(current->next == nullptr) cout << (int)current->data;
+	    else cout << (int)current->data;
 	    current = current->next;
 	}
 	cout << endl;

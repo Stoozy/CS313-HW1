@@ -8,8 +8,8 @@ using std::endl;
 
 
 struct node {
-	int data; 	// using int for now
-	node * next;
+	bool  data; 		
+    node * next;
 };
 
 class ll {

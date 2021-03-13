@@ -108,7 +108,7 @@ This is the structure of the linked list
 
 The algorithm I am using requires that I know the value at position i of the list, therefore I made a simple `at` function that returns the value of the node at index i.
 The pseudocode for this looks something like this: 
-    ```cpp
+
         T at(int pos){
             int counter = 0;
             Node * current = this->first;
@@ -121,7 +121,7 @@ The pseudocode for this looks something like this:
             }
             
         }
-    ```
+
 
 It simply iterates over the list until a counter has reached the index ( the counter increments every iteration of course).
 

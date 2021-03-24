@@ -1,8 +1,10 @@
 #pragma once
 #include <iostream>
+#include <iomanip>
 
 using std::cout;
 using std::endl;
+using std::setw;
 
 enum JOBTYPE {
     PILOT,
@@ -23,6 +25,7 @@ struct Worker{
     JOBTYPE disliked;
     Job assigned_job;
     friend std::ostream& operator<<(std::ostream &o, Worker w);
+    void print_header();
 };
 
 std::string job_from_id(int id){
@@ -49,10 +52,17 @@ std::string job_from_id(int id){
     return job;
 }
 
+void Worker::print_header(){
+    cout << "+------------+------------+------------+------------+" << endl;
+    cout << "| " << setw(10) << "Worker #" << " | " << setw(10) << "Dislikes" << " | " <<  setw(10) << "Job #" << " | " << setw(10) << "Job" << " | " <<endl;
+    cout << "+------------+------------+------------+------------+" << endl;
+    return;
+}
+
 std::ostream& operator<<(std::ostream &o, Worker w) {
     std::string job = job_from_id(w.assigned_job.type);
-    o  << "Worker #" << w.id << " (Won't work as: " << job_from_id(w.disliked) << ") -> Job #" << w.assigned_job.id << ": " << job;
-
+    o << "| " << setw(10) << w.id  << " | " << setw(10) << job_from_id(w.disliked) << " | " <<  setw(10) << w.assigned_job.id << " | " << setw(10) << job << " | " <<endl;
+    o << "+------------+------------+------------+------------+";
     return o;
 }
 

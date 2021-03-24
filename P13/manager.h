@@ -22,7 +22,6 @@ struct Worker{
     int id;
     JOBTYPE disliked;
     Job assigned_job;
-
     friend std::ostream& operator<<(std::ostream &o, Worker w);
 };
 
@@ -51,7 +50,7 @@ std::string job_from_id(int id){
 }
 
 std::ostream& operator<<(std::ostream &o, Worker w) {
-    std::string job = job_from_id(w.id);
+    std::string job = job_from_id(w.assigned_job.type);
     o  << "Worker #" << w.id << " (Won't work as: " << job_from_id(w.disliked) << ") -> Job #" << w.assigned_job.id << ": " << job;
 
     return o;

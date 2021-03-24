@@ -61,7 +61,29 @@ class dll {
         }
     
     }
+
+    node<T> * first(){
+        return this->list;
+    }
     
+    void rotate(){
+        // put last item as first and second to last as last
+        //node<T> * first = this->list;
+        node<T> * last = this->list; 
+        while(last->next != nullptr ){
+            last = last->next;
+        }
+        // clear next node so that it can
+        // be moved to the front 
+        node<T> * second_to_last = last->prev;
+        second_to_last->next = nullptr;
+
+        // putting last element as first
+        last->prev = nullptr;
+        last->next = this->list;
+        this->list = last;
+    }
+
     int length(){
         return this->size;
     }

@@ -24,6 +24,4 @@ Let's test this algorithm out on this list {1, 2, 4, 6} with wanted sum 6:
 
 We can write a recursive method for this where the base cases are if set is empty return and if leftover sum is 0 which means we have reached a solution. If the leftover sum is less than 0 then we know this path doesn't lead to a solution and we can stop right there (return). There should be 2 recursive calls, one where the subset includes the current integer and one where it is excluded.
 
-TODO:
-    Ask prof what to do about duplicates.
 

@@ -149,7 +149,7 @@ void recursiveBinarySearch(int* arr, int start, int end, int target) {
 
 int main() {
 	srand(time(nullptr));
-	int size = 1000000;
+	int size = 10000;
 	int* arr = new int[size];
 	for (int i = 0; i < size; i++)
 	{
@@ -175,7 +175,7 @@ int main() {
 	cout << "Time to complete Linked List Binary Search:" << LLSearchTime << " milliseconds" << endl;
 	cout << endl << endl;
 
-	int size2 = 10000000;
+	int size2 = 10000;
 	int* arr2 = new int[size2];
 	for (int i = 0; i < size2; i++)
 	{

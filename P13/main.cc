@@ -55,14 +55,12 @@ int main(){
                 std::string issue = "Worker #" ;
                 issue+= std::to_string(worker_node->data.id);
                 issues.push_back(issue);
-
             }
 
             // assign job here
             worker_node->data.assigned_job = job_node->data;
             job_node = job_node->next;
             worker_node = worker_node->next;
-
         }
 
         workers.print();
@@ -78,8 +76,8 @@ int main(){
 
         cout << "Would you like a new configuration? (Y/N)";
         cin >> c;
-
     }
+
     return 0;
 }
 

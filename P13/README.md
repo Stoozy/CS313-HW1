@@ -15,6 +15,7 @@ assigned job_4. Show how Bob manages his workers to adjust for problems
 
 There are two parts to this problem (a and b) and I will discuss them separately below.
 
+Video Link: https://www.youtube.com/watch?v=LTzq5QYhjbM
 ## A
 
 For the assignment of jobs to workers, I needed a way to represent workers and jobs in my code. So I created the following structures.

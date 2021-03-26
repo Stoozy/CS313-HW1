@@ -28,6 +28,15 @@ int main(){
 
     frequency_test ft = frequency_test();
     ft.set_text(encrypted);
+    ft.set_keylength(key.size());
+
+    int * occurences = ft.get_occurences();
+
+    cout << "Occurences of each letter: [ ";
+    for(int i=0; i<26; ++i) cout << occurences[i] << " ";
+    cout << " ]" << endl;
+
+    
     float * freq = ft.run_test();
 
     cout << "Frequency of each letter: [ ";
@@ -35,6 +44,12 @@ int main(){
         cout << freq[i] << " ";
     }
     cout << " ]" <<endl;
-    
+
+    cout << "Key: [ ";
+    for(int i=0; i<key.size(); ++i){
+        cout << ft.get_max_shift(i) << " ";
+    }
+    cout << " ]" <<endl;
+     
 }
 

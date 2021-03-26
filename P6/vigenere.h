@@ -68,4 +68,7 @@ class vigenere{
             this->encrypted = encrypted;
             return encrypted;
         }
+
+
+
 };

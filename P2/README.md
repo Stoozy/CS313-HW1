@@ -25,3 +25,12 @@ Time to complete Iterative Binary Search:9 milliseconds
 Time to complete Recursive Binary Search:1 milliseconds
 Time to complete Linked List Binary Search:90 milliseconds
 ```
+After a 2-3 hours, the function completed for 1 million elements
+Array of size: 1000000
+Target Number: 24836
+Target number found Iteratively. It is: 24836
+Target number found Recursively. It is: 24836
+Target number found in Linked List. It is: 24836
+Time to complete Iterative Binary Search:902 milliseconds
+Time to complete Recursive Binary Search:336 milliseconds
+Time to complete Linked List Binary Search:27114 milliseconds

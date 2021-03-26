@@ -104,9 +104,14 @@ int main() {
 	{
 		arr2[i] = rand() % size + 1;
 	}
+	int* arr3 = new int[size];
+	for (int i = 0; i < size; i++)
+	{
+		arr3[i] = rand() % size + 1;
+	}
 	auto customSortTime = TimeFunc([&]() {customSort(arr, 0, size); });
 	auto algo_sort_time = TimeFunc([&]() {sort(arr2,arr2+size); });
-	auto algo_stableSort_time = TimeFunc([&]() {stable_sort(arr2, arr2 + size); });
+	auto algo_stableSort_time = TimeFunc([&]() {stable_sort(arr3, arr3 + size); });
 	cout << "Custom sort time:\t " <<customSortTime << " milliseconds" << endl;
 	cout << "STL sort function time: " << algo_sort_time << " milliseconds" << endl;;
 	cout << "STL stable sort function time: " << algo_stableSort_time << " milliseconds" << endl;
